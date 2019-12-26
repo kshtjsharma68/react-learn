@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import CountryList from './country';
+import People from './people';
+import Result from '../clock/alarmClock';
 
 class App extends Component {
     constructor(props) {
@@ -28,10 +30,12 @@ class App extends Component {
     }
 
     render() {
-        let { countries, loading } = this.state;console.log('state',this.state)
+        let { countries, loading } = this.state;
         return (
             <div>
-                <CountryList countries={countries} loading={loading} />
+                {/* <CountryList countries={countries} loading={loading} /> */}
+                {/* <People count={10}/> */}
+                <Result />
             </div>
         )
     }
